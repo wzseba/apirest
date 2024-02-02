@@ -5,7 +5,7 @@ export const requireToken = (req, res, next) => {
   try {
     let token = req.headers.authorization;
 
-    if (!token) throw new Error("No existe el token en header");
+    if (!token) throw new Error("jwt malformed");
 
     token = token.split(" ")[1];
 
