@@ -35,7 +35,7 @@ export const login = async (req, res) => {
     return res.json({ token, expiresIn });
   } catch (error) {
     console.log(error);
-    return res.status(400).json({ msg: "El correo ya existe" });
+    return res.status(400).json({ msg: "Error en server" });
   }
 };
 
